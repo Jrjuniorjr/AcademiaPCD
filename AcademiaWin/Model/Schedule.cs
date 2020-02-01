@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AcademiaWin.Model
+namespace AcademiaWin
 {
     public class Schedule
     {

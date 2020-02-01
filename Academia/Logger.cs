@@ -1,6 +1,6 @@
 ﻿using NLog;
 
-namespace AppAcademiaPcd
+namespace AppAcademia
 {
     class Logger
     {

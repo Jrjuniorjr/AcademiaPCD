@@ -17,7 +17,7 @@
         {
             Contact = 1,      // Contato
             Event = 2,        // Evento
-            Reminder = 3,     // Lembrete
+            Note = 3,         // Lembrete
         }
     }
 }

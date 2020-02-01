@@ -13,10 +13,11 @@ namespace AcademiaPCD
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Academia PCD 2020 - Avanade");            
+            Console.WriteLine("Academia PCD 2020 - Avanade");
+
             Configurar();
-            _log.Debug("Debug Academia PCD");
-             
+            //_log.Debug("Debug Academia PCD");
+
             //Declaração de variável numérica
             Console.WriteLine("");
             int inteiro = 2;
@@ -36,7 +37,7 @@ namespace AcademiaPCD
             Console.WriteLine("Valor do saque   R$ " + string.Format("{0:#.00}", saque));
             Console.WriteLine("Saldo atual      R$ " + string.Format("{0:#.00}", (saldo - saque)));
             Console.WriteLine("Depósito         R$ " + string.Format("{0:#.00}", deposito));
-            Console.WriteLine("Novo Saldo       R$ " + string.Format("{0:#.00}", ((saldo - saque)+deposito)));
+            Console.WriteLine("Novo Saldo       R$ " + string.Format("{0:#.00}", ((saldo - saque) + deposito)));
 
             //Operações de Divisão (Convert DataType)
             Console.WriteLine("");
@@ -77,10 +78,10 @@ namespace AcademiaPCD
             int number2 = 0;
             int resto = 0;
             do
-            {                
+            {
                 number1 = random.Next(1, 100);
-                Console.WriteLine("Number 1   : {0}", number1);                
-                number2 = random.Next(1, 100);                
+                Console.WriteLine("Number 1   : {0}", number1);
+                number2 = random.Next(1, 100);
                 Console.WriteLine("Number 2   : {0}", number2);
                 resto = number1 % number2;
                 Console.WriteLine("Resto      : {0}", resto);
@@ -132,23 +133,23 @@ namespace AcademiaPCD
             //Listagem com classe
             List<Aluno> alunos = new List<Aluno>();
             Aluno aluno1 = new Aluno();
-            aluno1.nome = "Bruna";
-            aluno1.idade = 10;
+            aluno1.Nome = "Bruna";
+            aluno1.Idade = 10;
             alunos.Add(aluno1); //Exercicio 2
 
             Aluno aluno2 = new Aluno();
-            aluno2.nome = "Junior"; //Exercicio 1
-            aluno2.idade = 12;
+            aluno2.Nome = "Junior"; //Exercicio 1
+            aluno2.Idade = 12;
             alunos.Add(aluno2);
 
             Aluno aluno3 = new Aluno();
-            aluno3.nome = "Danilo";
-            aluno3.idade = 14;
+            aluno3.Nome = "Danilo";
+            aluno3.Idade = 14;
             alunos.Add(aluno3);
 
             foreach (var aluno in alunos) //Exercicio 4
             {
-                Console.WriteLine("Nome: {0} e {1} anos", aluno.nome, aluno.idade);
+                Console.WriteLine("Nome: {0} e {1} anos", aluno.Nome, aluno.Idade);
             }
 
             //alunos.Remove(aluno3); //Exercicio 3
@@ -158,27 +159,27 @@ namespace AcademiaPCD
             List<Aluno> ordenada = new List<Aluno>();
             for (int i = 1; i < 27; i++)
             {
-                int unicode = (i+96);
+                int unicode = (i + 96);
                 char character = (char)unicode;
                 string text = character.ToString();
                 Aluno aluno = new Aluno();
-                aluno.nome = "Aluno "+ text.ToUpper();
-                aluno.idade = i;
+                aluno.Nome = "Aluno " + text.ToUpper();
+                aluno.Idade = i;
                 ordenada.Add(aluno);
             }
 
-            IEnumerable<Aluno> nomes = ordenada.OrderBy(a => a.nome);
+            IEnumerable<Aluno> nomes = ordenada.OrderBy(a => a.Nome);
             foreach (var item in nomes)
             {
-                Console.WriteLine("Nome: {0}", item.nome);
+                Console.WriteLine("Nome: {0}", item.Nome);
             }
 
             //Listagem com ordem descendente (Idade)
             Console.WriteLine("");
-            IEnumerable<Aluno> idades = ordenada.OrderByDescending(a => a.idade);
+            IEnumerable<Aluno> idades = ordenada.OrderByDescending(a => a.Idade);
             foreach (var item in idades)
             {
-                Console.WriteLine("Idade: {0}", item.idade);
+                Console.WriteLine("Idade: {0}", item.Idade);
             }
 
             //Métodos Matemáticos
@@ -208,12 +209,12 @@ namespace AcademiaPCD
 
             if (int.TryParse(letras, out number))
             {
-                Console.WriteLine("Conversão OK {0}", texto);                
+                Console.WriteLine("Conversão OK {0}", texto);
             }
             else
             {
                 Console.WriteLine("Conversão ERROR");
-                _log.Error("Conversão ERROR");
+                //_log.Error("Conversão ERROR");
             }
 
             //Tratamento de exceção
@@ -234,7 +235,7 @@ namespace AcademiaPCD
             //Expressões regulares
             var textToTest = "hell0 w0rld";
             var regEx = "\\d"; //Inteiro
-                        
+
             var validacao = Regex.IsMatch(textToTest, regEx, RegexOptions.None);
             if (validacao)
             {
@@ -274,9 +275,14 @@ namespace AcademiaPCD
             funcionarios.Add(119);
             PagarFolha(funcionarios);
 
-
             //var ex = new NullReferenceException("Ocorreu um exceção de NULL");
             //throw ex;
+
+            Aluno aluna = new Aluno();
+            aluna.Nome = "Bruna Alves Machado da Silva";
+            aluna.Idade = 10;
+            Console.WriteLine("Nome: {0} Caracteres: {1}", 
+                    aluna.NomeMaiusculo(), aluna.QtdCaracteres());
 
             Console.ReadKey();                
         }
@@ -330,17 +336,17 @@ namespace AcademiaPCD
 
         public static void Configurar()
         {
-            var config = new NLog.Config.LoggingConfiguration();
+            //var config = new NLog.Config.LoggingConfiguration();
            
-            var logfile = new NLog.Targets.FileTarget("logfile") { FileName = "file.txt" };
-            var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
-            var logerro = new NLog.Targets.FileTarget("logerro") { FileName = "erro.txt" };
+            //var logfile = new NLog.Targets.FileTarget("logfile") { FileName = "file.txt" };
+            //var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
+            //var logerro = new NLog.Targets.FileTarget("logerro") { FileName = "erro.txt" };
 
-            config.AddRule(LogLevel.Info, LogLevel.Fatal, logconsole);
-            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
-            config.AddRule(LogLevel.Error, LogLevel.Fatal, logerro);
+            //config.AddRule(LogLevel.Info, LogLevel.Fatal, logconsole);
+            //config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+            //config.AddRule(LogLevel.Error, LogLevel.Fatal, logerro);
 
-            LogManager.Configuration = config;
+            //LogManager.Configuration = config;
 
         }
 
