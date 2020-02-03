@@ -4,8 +4,8 @@ namespace AcademiaWin
 {
     class Note
     {
-        private int Id { get; set; }
-        private string Text { get; set; }
-        private DateTime DateHour { get; set; }
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public DateTime DateHour { get; set; }
     }
 }

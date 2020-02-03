@@ -2,9 +2,9 @@
 {
     class Contact
     {
-        private int Id { get; set; }
-        private string Name { get; set; }
-        private long Phone { get; set; }
-        private string Adress { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public long Phone { get; set; }
+        public string Adress { get; set; }
     }
 }

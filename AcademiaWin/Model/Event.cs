@@ -4,9 +4,9 @@ namespace AcademiaWin
 {
     class Event
     {
-        private int Id { get; set; }
-        private string Description { get; set; }
-        private DateTime Date { get; set; }
-        private string Local { get; set; }
+        public int Id { get; set; }
+        public string Description { get; set; }
+        public DateTime Date { get; set; }
+        public string Local { get; set; }
     }
 }

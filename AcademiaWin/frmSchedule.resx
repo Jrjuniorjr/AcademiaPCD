@@ -118,7 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAgenda.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAjxJREFUOE9j
+        wAaYGBkY6u1FGB4Wqko+KlKbCMT3Hhep/QLSz4B44aNCNY2VoTIMvGxMUB1ooNxamAGoyPxxicbr1wtD
+        /346UfP3y7Wuv5/ONPx9syru7+MKnW9Ag4LXhstCdSABWT4Whvv5qoJAzc/f78r7+/VGDxh/Ptv4982K
+        mL/vd+T8/Xi0EmzIw0I1Tag2BEg2FGAAml79apYfXPOX691/nzaZ/QWKTwfim++3Z4NdAmQvgmpDgHZn
+        MZABBz7sLUQYcKXj7+Nije/AMOEHyvW9XhoJdhGQ/RyqDQHaXcAGXP54vBpuAAi/XhQGNET9y9MGk7+f
+        TteDwwQUsFBtCDDZUxxkwHaQX5ENAOEvl9vBGkFsUMAC1d2DaoOAFCMBhgcFKhJAievvNqZiGICMX80P
+        BhnQC9XKwJAK1AyN92tvlkdj1QTD77Zk/H1UrP7kYZGqKESzMTDkC9WkgZpvvFkZC1b05Wrn3w8HSv6+
+        mhf0993m9L8fDpb+BYX+i8nuIM13gGp15vpLgTQLgvwsC8S3QFEDswWssEgd5MxVQLwSiI8C8UYgzgba
+        zNnvIc7AxgxMskABeZCJb9ckQGwGBhQoCh+Xa/+9X6AqcyJVgaHTVRwcOyBcbCnMoCXKDnY5GAANuPV2
+        bSLcZlAqA4p9BOLdp9OUuKHKcANg3P6DaQbF9YsJLiADzh1NUWCoshWBqsIDkA141moB0lzxsEjNa46/
+        JFQFAQAyABkDDdDRFWNnkOdngarABxgYAPAVt9WrrHM/AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pnlLogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAcoAAAHKCAYAAACDnAvcAAAABGdBTUEAALGPC/xhBQAA+lNJREFUeF7s
         nQWQVNf29V+e/1/ee18SKLzwBKdwSBEhIVIhSPBCgrsV7hDc3V3Dw92dwd2d4DDISHdPu65v7XtvDz3D
@@ -1192,6 +1207,9 @@
         77jLlgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="bdsContacts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA

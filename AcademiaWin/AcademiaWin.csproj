@@ -88,6 +88,13 @@
     <Content Include="Resource\ava-logo.png" />
     <Content Include="Resource\ava-logo20.ico" />
     <Content Include="Resource\ava-logo20.png" />
+    <Content Include="Resource\padlock-filled.png" />
+    <Content Include="Resource\padlock-open.png" />
+    <Content Include="Resource\symbol-add.png" />
+    <Content Include="Resource\symbol-cancel.png" />
+    <Content Include="Resource\symbol-refresh.png" />
+    <Content Include="Resource\symbol-remove.png" />
+    <Content Include="Resource\symbol-save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
