@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\EnumAbaAtual.cs" />
     <Compile Include="Model\Note.cs" />
     <Compile Include="frmSchedule.cs">
       <SubType>Form</SubType>

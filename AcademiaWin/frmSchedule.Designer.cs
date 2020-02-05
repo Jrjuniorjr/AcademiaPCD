@@ -40,7 +40,7 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.grwContatos = new System.Windows.Forms.DataGridView();
-            this.lblContatos = new System.Windows.Forms.Label();
+            this.lblAbaAtual = new System.Windows.Forms.Label();
             this.bdsContacts = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBotoes = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -49,12 +49,15 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.pnlAcao = new System.Windows.Forms.Panel();
-            this.lblEndereco = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.lblFone = new System.Windows.Forms.Label();
-            this.txtFone = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblTextBox3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblTextBox2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblTextBox1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_contatos = new System.Windows.Forms.Button();
+            this.btn_lembretes = new System.Windows.Forms.Button();
+            this.btn_eventos = new System.Windows.Forms.Button();
             this.pnlAgenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grwContatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsContacts)).BeginInit();
@@ -179,7 +182,7 @@
             this.grwContatos.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.grwContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grwContatos.GridColor = System.Drawing.SystemColors.Menu;
-            this.grwContatos.Location = new System.Drawing.Point(5, 136);
+            this.grwContatos.Location = new System.Drawing.Point(5, 165);
             this.grwContatos.Margin = new System.Windows.Forms.Padding(0);
             this.grwContatos.MultiSelect = false;
             this.grwContatos.Name = "grwContatos";
@@ -188,25 +191,25 @@
             this.grwContatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grwContatos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grwContatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grwContatos.Size = new System.Drawing.Size(923, 390);
+            this.grwContatos.Size = new System.Drawing.Size(923, 361);
             this.grwContatos.TabIndex = 15;
             // 
-            // lblContatos
+            // lblAbaAtual
             // 
-            this.lblContatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblAbaAtual.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblContatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
-            this.lblContatos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContatos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContatos.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblContatos.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lblContatos.Location = new System.Drawing.Point(5, 114);
-            this.lblContatos.Margin = new System.Windows.Forms.Padding(1);
-            this.lblContatos.Name = "lblContatos";
-            this.lblContatos.Size = new System.Drawing.Size(923, 21);
-            this.lblContatos.TabIndex = 16;
-            this.lblContatos.Text = "Contatos";
-            this.lblContatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAbaAtual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(113)))));
+            this.lblAbaAtual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAbaAtual.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbaAtual.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblAbaAtual.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblAbaAtual.Location = new System.Drawing.Point(2, 143);
+            this.lblAbaAtual.Margin = new System.Windows.Forms.Padding(1);
+            this.lblAbaAtual.Name = "lblAbaAtual";
+            this.lblAbaAtual.Size = new System.Drawing.Size(923, 21);
+            this.lblAbaAtual.TabIndex = 16;
+            this.lblAbaAtual.Text = "Contatos";
+            this.lblAbaAtual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlBotoes
             // 
@@ -295,85 +298,118 @@
             // 
             // pnlAcao
             // 
-            this.pnlAcao.Controls.Add(this.lblEndereco);
-            this.pnlAcao.Controls.Add(this.txtEndereco);
-            this.pnlAcao.Controls.Add(this.lblFone);
-            this.pnlAcao.Controls.Add(this.txtFone);
-            this.pnlAcao.Controls.Add(this.lblNome);
-            this.pnlAcao.Controls.Add(this.txtNome);
+            this.pnlAcao.Controls.Add(this.lblTextBox3);
+            this.pnlAcao.Controls.Add(this.textBox3);
+            this.pnlAcao.Controls.Add(this.lblTextBox2);
+            this.pnlAcao.Controls.Add(this.textBox2);
+            this.pnlAcao.Controls.Add(this.lblTextBox1);
+            this.pnlAcao.Controls.Add(this.textBox1);
             this.pnlAcao.Location = new System.Drawing.Point(8, 469);
             this.pnlAcao.Name = "pnlAcao";
             this.pnlAcao.Size = new System.Drawing.Size(913, 55);
             this.pnlAcao.TabIndex = 23;
             // 
-            // lblEndereco
+            // lblTextBox3
             // 
-            this.lblEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.Location = new System.Drawing.Point(469, 5);
-            this.lblEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(437, 15);
-            this.lblEndereco.TabIndex = 11;
-            this.lblEndereco.Text = "Endereço";
+            this.lblTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextBox3.Location = new System.Drawing.Point(469, 5);
+            this.lblTextBox3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTextBox3.Name = "lblTextBox3";
+            this.lblTextBox3.Size = new System.Drawing.Size(437, 15);
+            this.lblTextBox3.TabIndex = 11;
+            this.lblTextBox3.Text = "Endereço";
             // 
-            // txtEndereco
+            // textBox3
             // 
-            this.txtEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEndereco.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(469, 25);
-            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(437, 25);
-            this.txtEndereco.TabIndex = 10;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(469, 25);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(437, 25);
+            this.textBox3.TabIndex = 10;
             // 
-            // lblFone
+            // lblTextBox2
             // 
-            this.lblFone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFone.Location = new System.Drawing.Point(282, 5);
-            this.lblFone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFone.Name = "lblFone";
-            this.lblFone.Size = new System.Drawing.Size(179, 15);
-            this.lblFone.TabIndex = 9;
-            this.lblFone.Text = "Fone";
+            this.lblTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextBox2.Location = new System.Drawing.Point(282, 5);
+            this.lblTextBox2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTextBox2.Name = "lblTextBox2";
+            this.lblTextBox2.Size = new System.Drawing.Size(179, 15);
+            this.lblTextBox2.TabIndex = 9;
+            this.lblTextBox2.Text = "Fone";
             // 
-            // txtFone
+            // textBox2
             // 
-            this.txtFone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFone.Location = new System.Drawing.Point(282, 25);
-            this.txtFone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtFone.Name = "txtFone";
-            this.txtFone.Size = new System.Drawing.Size(179, 25);
-            this.txtFone.TabIndex = 8;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(282, 25);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(179, 25);
+            this.textBox2.TabIndex = 8;
             // 
-            // lblNome
+            // lblTextBox1
             // 
-            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(5, 5);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(269, 15);
-            this.lblNome.TabIndex = 7;
-            this.lblNome.Text = "Nome";
+            this.lblTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextBox1.Location = new System.Drawing.Point(5, 5);
+            this.lblTextBox1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTextBox1.Name = "lblTextBox1";
+            this.lblTextBox1.Size = new System.Drawing.Size(269, 15);
+            this.lblTextBox1.TabIndex = 7;
+            this.lblTextBox1.Text = "Nome";
             // 
-            // txtNome
+            // textBox1
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(5, 25);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(269, 25);
-            this.txtNome.TabIndex = 6;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(5, 25);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(269, 25);
+            this.textBox1.TabIndex = 6;
+            // 
+            // btn_contatos
+            // 
+            this.btn_contatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_contatos.Location = new System.Drawing.Point(16, 116);
+            this.btn_contatos.Name = "btn_contatos";
+            this.btn_contatos.Size = new System.Drawing.Size(75, 23);
+            this.btn_contatos.TabIndex = 24;
+            this.btn_contatos.Text = "Contatos";
+            this.btn_contatos.UseVisualStyleBackColor = true;
+            this.btn_contatos.Click += new System.EventHandler(this.btn_contatos_Click);
+            // 
+            // btn_lembretes
+            // 
+            this.btn_lembretes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lembretes.Location = new System.Drawing.Point(97, 116);
+            this.btn_lembretes.Name = "btn_lembretes";
+            this.btn_lembretes.Size = new System.Drawing.Size(75, 23);
+            this.btn_lembretes.TabIndex = 25;
+            this.btn_lembretes.Text = "Lembretes";
+            this.btn_lembretes.UseVisualStyleBackColor = true;
+            this.btn_lembretes.Click += new System.EventHandler(this.btn_lembretes_Click);
+            // 
+            // btn_eventos
+            // 
+            this.btn_eventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eventos.Location = new System.Drawing.Point(178, 116);
+            this.btn_eventos.Name = "btn_eventos";
+            this.btn_eventos.Size = new System.Drawing.Size(75, 23);
+            this.btn_eventos.TabIndex = 26;
+            this.btn_eventos.Text = "Eventos";
+            this.btn_eventos.UseVisualStyleBackColor = true;
+            this.btn_eventos.Click += new System.EventHandler(this.btn_eventos_Click);
             // 
             // frmSchedule
             // 
@@ -381,9 +417,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 581);
+            this.Controls.Add(this.btn_eventos);
+            this.Controls.Add(this.btn_lembretes);
+            this.Controls.Add(this.btn_contatos);
             this.Controls.Add(this.pnlAcao);
             this.Controls.Add(this.pnlBotoes);
-            this.Controls.Add(this.lblContatos);
+            this.Controls.Add(this.lblAbaAtual);
             this.Controls.Add(this.grwContatos);
             this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.pnlAgenda);
@@ -417,7 +456,7 @@
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Button btnAgenda;
         private System.Windows.Forms.DataGridView grwContatos;
-        private System.Windows.Forms.Label lblContatos;
+        private System.Windows.Forms.Label lblAbaAtual;
         private System.Windows.Forms.BindingSource bdsContacts;
         private System.Windows.Forms.Panel pnlBotoes;
         private System.Windows.Forms.Button btnCancelar;
@@ -426,12 +465,15 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Panel pnlAcao;
-        private System.Windows.Forms.Label lblEndereco;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.Label lblFone;
-        private System.Windows.Forms.TextBox txtFone;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblTextBox3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblTextBox2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblTextBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_contatos;
+        private System.Windows.Forms.Button btn_lembretes;
+        private System.Windows.Forms.Button btn_eventos;
     }
 }
 
