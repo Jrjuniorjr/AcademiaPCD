@@ -58,6 +58,7 @@
             this.btn_contatos = new System.Windows.Forms.Button();
             this.btn_lembretes = new System.Windows.Forms.Button();
             this.btn_eventos = new System.Windows.Forms.Button();
+            this.btn_salvar_arquivo = new System.Windows.Forms.Button();
             this.pnlAgenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grwContatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsContacts)).BeginInit();
@@ -411,12 +412,27 @@
             this.btn_eventos.UseVisualStyleBackColor = true;
             this.btn_eventos.Click += new System.EventHandler(this.btn_eventos_Click);
             // 
+            // btn_salvar_arquivo
+            // 
+            this.btn_salvar_arquivo.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_salvar_arquivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salvar_arquivo.Image = ((System.Drawing.Image)(resources.GetObject("btn_salvar_arquivo.Image")));
+            this.btn_salvar_arquivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salvar_arquivo.Location = new System.Drawing.Point(758, 110);
+            this.btn_salvar_arquivo.Name = "btn_salvar_arquivo";
+            this.btn_salvar_arquivo.Size = new System.Drawing.Size(163, 29);
+            this.btn_salvar_arquivo.TabIndex = 27;
+            this.btn_salvar_arquivo.Text = "Salvar em Arquivo";
+            this.btn_salvar_arquivo.UseVisualStyleBackColor = false;
+            this.btn_salvar_arquivo.Click += new System.EventHandler(this.btn_salvar_arquivo_Click);
+            // 
             // frmSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 581);
+            this.Controls.Add(this.btn_salvar_arquivo);
             this.Controls.Add(this.btn_eventos);
             this.Controls.Add(this.btn_lembretes);
             this.Controls.Add(this.btn_contatos);
@@ -474,6 +490,7 @@
         private System.Windows.Forms.Button btn_contatos;
         private System.Windows.Forms.Button btn_lembretes;
         private System.Windows.Forms.Button btn_eventos;
+        private System.Windows.Forms.Button btn_salvar_arquivo;
     }
 }
 

@@ -97,5 +97,8 @@
     <Content Include="Resource\symbol-remove.png" />
     <Content Include="Resource\symbol-save.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ArquivosListas\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

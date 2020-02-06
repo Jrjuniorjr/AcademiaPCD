@@ -2,7 +2,8 @@
 
 namespace AcademiaWin
 {
-    class Event
+    [Serializable]
+    public class Event
     {
         public int Id { get; set; }
         public string Description { get; set; }

@@ -1259,6 +1259,12 @@
         D8J8OYZQf2ABICfCbSEHjBpABQNAiQSkGW9UMTAwAABg9mjuVDKLpAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btn_salvar_arquivo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAChJREFUOE9j
+        GAWDASzV0qAIM7yxsaoH4n9k4nqGPQZ6FOFRMAwAAwMA2ZhGEy6zMK8AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA

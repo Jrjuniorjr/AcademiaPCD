@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace AcademiaWin
@@ -23,15 +24,53 @@ namespace AcademiaWin
             InitializeComponent();
             Load += ApplicationLoad;
             KeyDown += ApplicationKeyDown;
-            this.contatos = new List<Contact>();
-            this.lembretes = new List<Note>();
-            this.eventos = new List<Event>();
             this.enumAbaAtual = EnumAbaAtual.CONTATOS;
-            PopulateContacts();
-            PopulateEvents();
-            PopulateNotes();
+            lerArquivosListas();
+            
         }
+        private void lerArquivosListas()
+        {
+            FileInfo fileContatos = new FileInfo(@"..\..\ArquivosListas\contatos.data");
+            FileInfo fileEventos = new FileInfo(@"..\..\ArquivosListas\eventos.data");
+            FileInfo fileLembretes = new FileInfo(@"..\..\ArquivosListas\lembretes.data");
 
+            if (!fileContatos.Exists || fileContatos.Length <= 0)
+            {
+                contatos = new List<Contact>();
+            }
+            else
+            {
+                FileStream fileStream = new FileStream(@"..\..\ArquivosListas\contatos.data", FileMode.Open);
+                
+                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                contatos = (List<Contact>)binaryFormatter.Deserialize(fileStream);
+                fileStream.Close();
+            }
+            if (!fileEventos.Exists || fileEventos.Length <= 0)
+            {
+                eventos = new List<Event>();
+            }
+            else
+            {
+                FileStream fileStream = new FileStream(@"..\..\ArquivosListas\eventos.data", FileMode.Open);
+                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                eventos = (List<Event>)binaryFormatter.Deserialize(fileStream);
+                fileStream.Close();
+
+            }
+            if (!fileLembretes.Exists || fileLembretes.Length <= 0)
+            {
+                lembretes = new List<Note>();
+            }
+            else
+            {
+                FileStream fileStream = new FileStream(@"..\..\ArquivosListas\lembretes.data", FileMode.Open);
+                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                lembretes = (List<Note>)binaryFormatter.Deserialize(fileStream);
+                fileStream.Close();
+            }
+           
+        }
         private void ApplicationLoad(object sender, EventArgs e)
         {
             FormatContacts();
@@ -558,6 +597,21 @@ namespace AcademiaWin
             this.lblTextBox2.Text = "Data/Hora(yyyy-mm-dd HH:mm)";
             this.lblTextBox3.Text = "Local";
             FormatEvent();
+        }
+
+        private void btn_salvar_arquivo_Click(object sender, EventArgs e)
+        {
+            FileStream fileStreamContatos = new FileStream(@"..\..\ArquivosListas\contatos.data", FileMode.Create);
+            FileStream fileStreamEventos = new FileStream(@"..\..\ArquivosListas\eventos.data", FileMode.Create);
+            FileStream fileStreamLembretes = new FileStream(@"..\..\ArquivosListas\lembretes.data", FileMode.Create);
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            binaryFormatter.Serialize(fileStreamContatos, contatos);
+            binaryFormatter.Serialize(fileStreamEventos, eventos);
+            binaryFormatter.Serialize(fileStreamLembretes, lembretes);
+            fileStreamContatos.Close();
+            fileStreamEventos.Close();
+            fileStreamLembretes.Close();
+
         }
     }
 }

@@ -1,6 +1,9 @@
-﻿namespace AcademiaWin
+﻿using System;
+
+namespace AcademiaWin
 {
-    class Contact
+    [Serializable]
+    public class Contact
     {
         public int Id { get; set; }
         public string Name { get; set; }
